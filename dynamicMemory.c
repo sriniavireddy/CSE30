@@ -46,8 +46,9 @@ int main(void) {
 	setCourseDetails(&courseArray[1], 3, 'B');
 	printDetails(courseArray, CALLOC_ARRAY_SIZE);
 	
-  //realloc example - Doubling array size
+	//realloc example - Doubling array size
 	courseArray = (struct course *) realloc(courseArray, REALLOC_ARRAY_SIZE * sizeof(struct course));
+	setCourseDetails(&courseArray[2], 4, 'C');
 	
 	printf("\nResults After Swapping\n");
 	swapId(&courseArray[0], &courseArray[1]);
